@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python on Static Web App</title>
+</head>
+<body>
+    <h1>Hello, Azure Static Web Apps!</h1>
+    <button onclick="callPythonFunction()">Run Python Code</button>
+    <div id="result"></div>
+    <script>
+        async function callPythonFunction() {
+            const response = await fetch('/api/run-python');
+            const result = await response.text();
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>
+
+az staticwebapp upload --name Testfromsupplychain
+--resource-group <supplychainpoc-resourcegroup> --source 
+    
+func azure functionapp publish <test_print class="py"></test_print>
+
+
+{
+      "routes": [
+        {
+          "route": "/api/*",
+          "serve": "https://brave-smoke-0ee203b1e.6.azurestaticapps.net/api/*"
+        }
+      ]
+    

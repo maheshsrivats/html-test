@@ -37,6 +37,7 @@ jobs:
           app_location: "." # App source code path (root directory)
           api_location: "" # API source code path - optional
           output_location: "." # Built app content directory (root directory)
+          skip_app_build: true # Skip build step for static content
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:

@@ -25,15 +25,10 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Print Directory Structure
         run: ls -R
 
-      - name: Build project
-        run: npm run build
-
+      
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1

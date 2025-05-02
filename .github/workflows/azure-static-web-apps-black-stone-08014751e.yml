@@ -25,8 +25,25 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Print Directory Structure
-        run: ls -R
+
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Print Directory Structure
+        run: ls -R
+
+      - name: Build project
+        run: |
+          echo 'Building project...' && mkdir dist && cp test_flask.py dist/python_flask.html
+
 
       
       - name: Build And Deploy

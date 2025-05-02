@@ -31,8 +31,6 @@ jobs:
       - name: Print Directory Structure
         run: ls -R
 
-      - name: Build project
-        run: npm run build
 
       - name: Build And Deploy
         id: builddeploy

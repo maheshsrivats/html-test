@@ -26,9 +26,6 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install GitHub CLI
-        run: sudo apt-get install gh
-
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -44,7 +41,7 @@ jobs:
 
       - name: Build project
         run: |
-          echo 'Building project...' && python test_flask.py
+          echo 'Building project...' && mkdir -p dist && python test_flask.py > dist/index.html
 
       - name: Show Build Output
         run: cat dist/index.html

@@ -26,6 +26,9 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Install GitHub CLI
+        run: sudo apt-get install gh
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:

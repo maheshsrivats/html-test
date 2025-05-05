@@ -43,7 +43,7 @@ jobs:
           pip install pydantic_settings
           pip install seaborn
           pip install matplotlib
-          
+          pip install setuptools
           pip install pandasai
           pip install numpy==1.26.4
           pip install langchain_openai

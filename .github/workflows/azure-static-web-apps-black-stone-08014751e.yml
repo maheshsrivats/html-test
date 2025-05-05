@@ -45,7 +45,7 @@ jobs:
           pip install matplotlib
           
           pip install pandasai
-          pip install pandasai.llm 
+          
           pip install langchain_openai
 
 

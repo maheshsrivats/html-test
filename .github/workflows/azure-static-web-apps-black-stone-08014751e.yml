@@ -37,7 +37,7 @@ jobs:
           pip install flask
           pip install streamlit
           pip install datetime
-          pip install pandas == 1.5.3
+          pip install pandas==1.5.3
           
           pip install ydata_profiling
           pip install pydantic_settings

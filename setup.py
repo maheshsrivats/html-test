@@ -7,6 +7,7 @@ setup(
     py_modules=['test_streamlit'],
     install_requires=[
         'streamlit',
+        'numpy',  # Ensure numpy is included in the dependencies
     ],
     entry_points={
         'console_scripts': [

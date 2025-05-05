@@ -1,11 +1,16 @@
 from setuptools import setup
 
 setup(
-    name='your-python-project',
+    name='your-streamlit-project',
     version='1.0.0',
-    description='A simple Python project for Azure Static Web Apps',
-    py_modules=['test_flask'],
+    description='A simple Streamlit project for Azure Static Web Apps',
+    py_modules=['test_streamlit'],
     install_requires=[
-        'flask',
+        'streamlit',
     ],
+    entry_points={
+        'console_scripts': [
+            'run-app=test_streamlit:main',
+        ],
+    },
 )

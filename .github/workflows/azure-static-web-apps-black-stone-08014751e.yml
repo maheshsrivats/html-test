@@ -40,8 +40,10 @@ jobs:
           pip install numpy==1.26.4
           pip install langchain_openai
 
+
+
       - name: Copy flask_python.py to deployment directory
-        run: cp path/to/flask_python.py .
+        run: cp flask_python.py .
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 

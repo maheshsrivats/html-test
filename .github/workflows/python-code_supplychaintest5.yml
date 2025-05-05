@@ -44,9 +44,10 @@ jobs:
           pip install numpy==1.26.4
           pip install langchain_openai
 
-      - name: Copy flask_python.py to deployment directory
-        run: cp flask_python.py .
-
+      - name: Build project
+        run: |
+          echo 'Building project...' && mkdir -p dist && python test_flask.py
+          
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Zip artifact for deployment

@@ -43,7 +43,7 @@ jobs:
 
 
       - name: Copy flask_python.py to deployment directory
-        run: cp flask_python.py .
+        run: cp src/flask_python.py 
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 

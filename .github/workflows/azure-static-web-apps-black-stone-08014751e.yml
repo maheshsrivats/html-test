@@ -50,8 +50,13 @@ jobs:
       - name: Print Directory Structure
         run: ls -R
 
-      - name: Run Python Script
-        run: python test_flask.py
+      - name: Move Python Script to Dist
+        run: |
+          mkdir -p dist
+          cp test_flask.py dist/
+
+      - name: Show Build Output
+        run: ls dist
 
       - name: Build And Deploy
         id: builddeploy

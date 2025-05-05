@@ -52,12 +52,12 @@ jobs:
 
       - name: Build project
         run: |
-          echo 'Building project...' && mkdir -p dist && python test_flask.py > dist/index.html
+          echo 'Building project...' && mkdir -p dist && cp app.py dist/app.py
       - name: Show Build Output
-        run: cat dist/index.html
-
+        run: cat dist/app.py
       - name: Run Streamlit App
-        run: streamlit run dist/index.html
+        run: streamlit run dist/app.py
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1

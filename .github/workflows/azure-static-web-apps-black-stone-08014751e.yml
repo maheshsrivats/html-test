@@ -41,9 +41,9 @@ jobs:
           pip install langchain_openai
 
 
-
-      - name: Copy test_flask.py to deployment directory
-        run: cp src/test_flask.py 
+      - name: Build project
+        run: |
+          echo 'Building project...' && mkdir -p dist && python test_flask.py
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 

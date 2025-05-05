@@ -38,7 +38,7 @@ jobs:
           pip install streamlit
           pip install datetime
           pip install pandas
-          pip install PIL
+          
           pip install ydata_profiling
           pip install pydantic_settings
           pip install seaborn

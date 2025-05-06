@@ -53,7 +53,7 @@ jobs:
         run: |
           mkdir -p dist
           nohup streamlit run test_flask.py &
-          sleep 10
+          sleep 300
           curl http://localhost:8501 > dist/index.html
 
       - name: Show Build Output

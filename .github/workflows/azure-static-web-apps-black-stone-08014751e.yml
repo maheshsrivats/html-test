@@ -51,6 +51,7 @@ jobs:
 
       - name: Run Streamlit and Save Output
         run: |
+          mkdir -p dist
           nohup streamlit run test_flask.py &
           sleep 10
           curl http://localhost:8501 > dist/index.html

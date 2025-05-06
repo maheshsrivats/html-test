@@ -45,6 +45,10 @@ jobs:
         run: |
           echo 'Building project...' && mkdir -p dist && python test_flask.py
 
+      - name : Run streamlit application
+        run: streamlit run test_flask.py
+          
+
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Zip artifact for deployment
